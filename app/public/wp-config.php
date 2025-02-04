@@ -90,6 +90,11 @@ $table_prefix = 'wp_';
 if ( ! defined( 'WP_DEBUG' ) ) {
 	define( 'WP_DEBUG', false );
 }
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'aws',
+    'access-key-id' => 'AKIAWOAVR75TFKGWXYW7',
+    'secret-access-key' => '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',
+) ) );
 
 define( 'WP_ENVIRONMENT_TYPE', 'local' );
 /* That's all, stop editing! Happy publishing. */
