@@ -2,7 +2,7 @@
 /*
 Plugin Name:  Topclass
 Plugin URI:   http://topclass.club
-Description:  API Topclass WordPress Plugin
+Description:  Topclass WordPress Plugin
 Version:      1.0
 Author:       Topclass
 Author URI:   http:/topclass.club
