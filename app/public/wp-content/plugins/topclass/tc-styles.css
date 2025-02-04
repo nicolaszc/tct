@@ -3,7 +3,6 @@
 body{
     font-family: "Montserrat", serif;
     font-weight: 400;
-    background-image: url('topclass-bg.webp');
     background-size: cover;
     color: #fff;
 }
@@ -17,7 +16,7 @@ header,footer{
 }
 .input-group{
     width:60%;
-    margin:50px auto 0;
+    margin:30px auto 0;
 }
 .coming-soon .input-group p{
     font-size: 14px;
@@ -40,8 +39,33 @@ header,footer{
     box-shadow: none; 
 }
 .wpcf7-response-output{
-    border-color: transparent!important;
+    border-color: transparent !important;
+    background-color: rgba(70, 180, 80, 0.75);
+    font-size: 14px;
+    display: inline-block;
+    margin: 1em 0 0 !important;
+    padding: 0.2em 3em !important;
+    border-radius: 0.25em;
 }
+.wpcf7-response-output::before{
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 0.5em;
+}
+.wpcf7-form.invalid .wpcf7-response-output{
+    background-color: rgba(255, 185, 0, 0.75);
+    color: #261010;
+}
+.wpcf7-form.invalid .wpcf7-response-output::before{
+    content: "\f071";
+} 
+.wpcf7-form.failed .wpcf7-response-output{
+    background-color: rgba(235, 0, 99, 0.75);
+}
+.wpcf7-form.failed .wpcf7-response-output::before{
+    content: "\f00d";
+}   
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, :not(.btn-check)+.btn:active{
     background-color: #cc0055;
     border-color: #cc0055;
@@ -74,6 +98,14 @@ header,footer{
     margin-bottom: 10px;
     font-size: 12px;
 }
+.coming-soon small a{
+    color: #fff;
+    text-decoration: underline;
+}
+.coming-soon small a:hover{
+    color: #fff;
+    text-decoration: none;
+}
 .wpcf7-spinner{
     position: absolute;
     top: -30px;
@@ -83,10 +115,10 @@ header,footer{
 
 /* Media Querys Mobile*/
 @media (max-width:576px){
-    body{
+    /* body{
         background-size: 400%;
         background-position: 40% center;
-    }
+    } */
     .coming-soon .content .logo{
         margin-top: 60%;
     }
