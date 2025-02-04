@@ -1,0 +1,1 @@
+[04-Feb-2025 02:48:34 UTC] PHP Warning:  filemtime(): stat failed for /Users/nicolaszakrzewicz/Local Sites/tct/app/public/wp-content/themes/topclass/assets/css/main.css in /Users/nicolaszakrzewicz/Local Sites/tct/app/public/wp-content/themes/topclass/functions.php on line 21
