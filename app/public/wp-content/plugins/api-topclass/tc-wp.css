@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+}
+header,footer{
+	display:none;
+}
+.btn-primary{
+    background-color: #eb0063;
+    border-color: #eb0063;
+    font-size: 14px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, :not(.btn-check)+.btn:active{
+    background-color: #cc0055;
+    border-color: #cc0055;
+}
+.coming-soon{
+    width:40%;
+    margin:0 auto
+}
+.coming-soon .content{
+    display:flex;
+    justify-content:center;
+    height:100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.coming-soon .content .logo{
+    height:40%;
+    text-align: 
+    center;width:100%;
+    margin-top: 30%;
+}
+.coming-soon .content .logo img{
+    width: 50%;
+}
+.coming-soon .content .logo p{
+    margin-top: 0;
+}
+.coming-soon small{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+/* Media QUerys */
+@media (max-width:576px){
+    .coming-soon .content .logo{
+        margin-top: 40%;
+    }
+    .btn-primary{
+        display: block;
+        width: 50%;
+        margin: 0 auto 1rem;
+    }
+    .btn-primary.girls{
+        margin-top: 50px;
+    }
+    .coming-soon{
+        width:100%;
+    }
+}
