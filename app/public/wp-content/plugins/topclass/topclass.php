@@ -50,7 +50,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
 function add_theme_scripts() {  
-    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), '1.2', 'all');
+    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), '1.2', 'true');
 }
   
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts', 10000 );
