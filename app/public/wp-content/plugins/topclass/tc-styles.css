@@ -6,7 +6,7 @@ body{
     background-size: cover;
     color: #fff!important;
 }
-header,footer{
+.home header,.home footer{
 	display:none;
 }
 .btn-primary{
