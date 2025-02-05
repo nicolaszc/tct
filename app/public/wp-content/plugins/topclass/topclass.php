@@ -50,10 +50,10 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
 function add_theme_scripts() {  
-    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), '1.2', 'true');
+    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), '1.2', 'all');
 }
   
-add_action( 'wp_enqueue_scripts', 'add_theme_scripts', 10000 );
+add_action( 'get_footer', 'add_theme_scripts', 10000 );
 
 remove_filter ('the_content', 'wpautop');
 add_filter('wpcf7_autop_or_not', '__return_false');
