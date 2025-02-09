@@ -167,9 +167,8 @@ header{
             background-color: transparent;
         }
         .owl-dot{
-            border-color: $white!important;
             background-color: transparent;
-            border: 1px solid #FFF!important;
+            border: 1px solid $gray-500!important;
             width: 15px;
             height: 15px;
             margin: 30px 2px 20px;
@@ -182,7 +181,7 @@ header{
             display: block;
             font-size: 10px;
             margin-left: -3px;
-            margin-top: -20px;
+            margin-top: -22px;
             /* pointer-events: none; */
             transform: rotate(-90deg);
             color: $gray-500;
@@ -192,6 +191,7 @@ header{
         }
         .owl-dot.active{
             background-color: $white!important;
+            border: 1px solid $white!important;
         }
     }
     .item{
