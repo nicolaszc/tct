@@ -2,3 +2,16 @@
   Use this file to add your own custom utility classes.
   https://getbootstrap.com/docs/5.3/utilities/api/
 */
+
+$utilities: (
+  "viewport-height": (
+      property: height,
+      class: vh,
+      values: (
+        100: 100vh,
+        75: 75vh,
+        50: 50vh,
+        25: 25vh,
+        )
+    ),
+);

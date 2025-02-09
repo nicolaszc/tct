@@ -1,7 +1,7 @@
 <!-- Banners -->
 <?php if ( have_rows( 'banners' ) ) : 
     $count = count(get_field('banners'));?>
-      <section id="main-banner">
+      <section id="main-banner" class="vh-50">
        <!--  <div class="test owl-dots"></div> -->
         <div class="owl-carousel owl-main-banner">
           <?php 
