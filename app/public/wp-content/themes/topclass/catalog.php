@@ -12,7 +12,7 @@
 // Exit if accessed directly
 defined('ABSPATH') || exit;
 
-get_header();
+//get_header();
 $host=$_SERVER['HTTP_HOST'];
 
 $bkg_img = get_field('body_bg');
@@ -44,9 +44,9 @@ $bajada = get_field('bajada');
           <?php 
           while ( have_rows( 'banners' ) ) : the_row(); ?>
             <div class="item" data-dot="<span>0<?php echo $count ?> /</span>">
-              <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none"/>
-              <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block"/>
-              <div class="caption container d-none d-md-block">
+              <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
+              <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
+              <div class="caption container d-none d-md-block position-relative z-9">
                 <div class="row px-5 ">
                   <div class="<?php if(get_sub_field('alineacion_texto')=="Izquierda"){ echo 'col-md-5';}?><?php if(get_sub_field('alineacion_texto')=="Centro"){ echo 'col-md-6 offset-md-3 text-center';}?><?php if(get_sub_field('alineacion_texto')=="Derecha"){ echo 'col-md-5 offset-md-7 text-end';}?>" style="color:<?php echo get_sub_field('color_texto'); ?>">
                     <?php if (!empty(get_sub_field('titulo'))) { ?>
@@ -98,7 +98,9 @@ $bajada = get_field('bajada');
         </div>
         <a href="#about" class="mouse bounce"><i class="fa-solid fa-computer-mouse"></i></a>
       </section>            
-    <?php endif; ?>
+    <?php endif; 
+    get_header();
+    ?>
   <!-- /Banners -->
 
   <div id="content" class="site-content">
