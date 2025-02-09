@@ -6,7 +6,7 @@
         <div class="owl-carousel owl-main-banner">
           <?php 
           while ( have_rows( 'banners' ) ) : the_row(); ?>
-            <div class="item position-relative vh-75 overflow-hidden" data-dot="<span>0<?php echo $count ?> /</span>">
+            <div class="item position-relative vh-75 overflow-hidden" data-dot="<span>0<?php echo $count ?> </span>">
               <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
               <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
               <div class="caption container d-none d-md-block position-relative z-9">
