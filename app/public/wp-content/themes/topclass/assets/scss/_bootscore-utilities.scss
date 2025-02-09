@@ -3,7 +3,9 @@
   https://getbootstrap.com/docs/5.3/utilities/api/
 */
 
-$utilities: (
+$utilities: map-merge(
+  $utilities,
+  (
   "viewport-height": (
       property: height,
       class: vh,
@@ -13,5 +15,6 @@ $utilities: (
         50: 50vh,
         25: 25vh,
         )
-    ),
+    )
+  )
 );
