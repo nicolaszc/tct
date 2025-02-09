@@ -43,14 +43,14 @@ $bajada = get_field('bajada');
       <main id="main" class="site-main">
 
         <div class="entry-content">
-          <div class="coming-soon">
+          <div class="catalog">
             <div class="content">
-              <div class="banner">
+  
                 <p style="margin: 0;"><?php echo $bajada; ?></p>
                 <?php 
                   the_content();               
                 ?>
-              </div>
+              
               <small>© <?php echo $_SERVER['HTTP_HOST'] ?> - <a href="https://topclass.club" >Grupo TopclassClub 2025.</a></small> 
             </div>
           </div>
