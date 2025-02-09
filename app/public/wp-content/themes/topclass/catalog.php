@@ -43,7 +43,7 @@ $bajada = get_field('bajada');
       <main id="main" class="site-main">
 
         <div class="entry-content">
-          <div class="catalog">
+          <div class="catalog min-vh-75">
             <div class="content">
   
                 <p style="margin: 0;"><?php echo $bajada; ?></p>
