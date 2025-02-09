@@ -61,7 +61,7 @@ $bajada = get_field('bajada');
                   </div>
                 </div> 
               </div> 
-              <div class="caption container d-block d-md-none">
+              <div class="caption container d-block d-md-none position-relative z-9">
                 <div class="row px-5 ">
                   <div class="col-md-6 offset-md-3 text-center" style="color:<?php echo get_sub_field('color_texto'); ?>">
                     <?php if (!empty(get_sub_field('titulo'))) { ?>
@@ -100,7 +100,7 @@ $bajada = get_field('bajada');
       </section>            
     <?php endif; ?>
   <!-- /Banners -->
-   
+
   <div id="content" class="site-content">
     <div id="primary" class="content-area">
 
