@@ -57,8 +57,8 @@ defined('ABSPATH') || exit;
         
         <!-- Navbar Brand -->
         <a class="navbar-brand" href="<?= esc_url(home_url()); ?>">
-          <img src="<?= get_field('site_logo','options'); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-td-none me-2">
-          <img src="<?= get_field('site_logo','options'); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-tl-none me-2">
+          <img src="<?= get_field('site_logo','options'); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-td-none me-2 logo">
+          <img src="<?= get_field('site_logo','options'); ?>" alt="<?php bloginfo('name'); ?> Logo" class="d-tl-none me-2 logo">
         </a>  
 
         <!-- Offcanvas Navbar -->
