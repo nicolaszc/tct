@@ -25,6 +25,7 @@ $bajada = get_field('bajada');
   <style>
     html{
       min-height:100vh;
+      height: auto;
     }
     body{
       background-image: url(<?php echo $bkg_img ?>); 
