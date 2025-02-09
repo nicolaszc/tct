@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
 
 get_header();
 $host=$_SERVER['HTTP_HOST'];
-
+$bkg_color = get_field('body_bg_color');
 $bkg_img = get_field('body_bg');
 $bkg_size = get_field('body_bg_size');
 $bkg_position = get_field('body_bg_pos');
@@ -28,6 +28,7 @@ $bajada = get_field('bajada');
       height: auto;
     }
     body{
+      background-color: <?php echo $bkg_color ?>;
       background-image: url(<?php echo $bkg_img ?>); 
       background-repeat: no-repeat;
       background-size: <?php echo $bkg_size ?>;
