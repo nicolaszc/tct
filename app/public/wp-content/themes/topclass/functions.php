@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 add_action('wp_enqueue_scripts', 'bootscore_child_enqueue_styles');
 function bootscore_child_enqueue_styles() {
   //owl.css
-  $modificated_owlCss       = date('YmdHi', filemtime(get_template_directory() . '/assets/css/owl.carousel.min.css'));
+  $modificated_owlCss       = date('YmdHi', filemtime(get_stylesheet_directory_uri() . '/assets/css/owl.carousel.min.css'));
   wp_enqueue_style('owl', get_stylesheet_directory_uri() . '/assets/css/owl.carousel.min.css', array(), $modificated_owlCss);
   
   // Compiled main.css
@@ -28,13 +28,13 @@ function bootscore_child_enqueue_styles() {
   wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
   
   //owl.js
-  $modificated_owlJs          = date('YmdHi', filemtime(get_template_directory() . '/assets/js/owl.carousel.js'));
-  wp_enqueue_script('owl-script', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.js', array('jquery'), $modificated_owlJs, false, true);
+  $modificated_owlJs = date('YmdHi', filemtime(get_stylesheet_directory_uri() . '/assets/js/owl.carousel.js'));
+  wp_enqueue_script('owl-script', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.js', array(), $modificated_owlJs, false);
 
   // custom.js
   // Get modification time. Enqueue file with modification date to prevent browser from loading cached scripts when file content changes. 
   $modificated_CustomJS = date('YmdHi', filemtime(get_stylesheet_directory() . '/assets/js/custom.js'));
-  wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), $modificated_CustomJS, false, true);
+  wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), $modificated_CustomJS, true);
   
   
 }
