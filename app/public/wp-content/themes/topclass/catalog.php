@@ -18,9 +18,7 @@ $host=$_SERVER['HTTP_HOST'];
 $bkg_img = get_field('body_bg');
 $bkg_size = get_field('body_bg_size');
 $bkg_position = get_field('body_bg_pos');
-$logo = get_field('logo');
 $bajada = get_field('bajada');
-$form = get_field('form');
 
 ?>
 
@@ -43,14 +41,10 @@ $form = get_field('form');
         <div class="entry-content">
           <div class="coming-soon">
             <div class="content">
-              <div class="logo">
-                <img src="<?php echo $logo; ?>" alt="topclass-girls" />
+              <div class="banner">
                 <p style="margin: 0;"><?php echo $bajada; ?></p>
-                <?php if ($_SERVER['HTTP_HOST'] == 'topclass.club') : 
-                  the_content();
-                else:
-                  echo apply_shortcodes($form);
-                endif;                 
+                <?php 
+                  the_content();               
                 ?>
               </div>
               <small>© <?php echo $_SERVER['HTTP_HOST'] ?> - <a href="https://topclass.club" >Grupo TopclassClub 2025.</a></small> 
