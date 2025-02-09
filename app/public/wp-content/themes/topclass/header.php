@@ -48,7 +48,7 @@ defined('ABSPATH') || exit;
   <?php if (is_active_sidebar('top-bar')) : ?>
     <?php dynamic_sidebar('top-bar'); ?>
   <?php endif; ?>  
-
+  <?php get_template_part('template-parts/main-banner'); ?>
   <header id="masthead" class="<?= apply_filters('bootscore/class/header', 'sticky-top'); ?> site-header">
 
     <nav id="nav-main" class="navbar <?= apply_filters('bootscore/class/header/navbar/breakpoint', 'navbar-expand-lg'); ?>">
