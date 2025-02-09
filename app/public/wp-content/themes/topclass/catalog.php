@@ -39,9 +39,12 @@ $bajada = get_field('bajada');
       height: auto;
     }
     body{
-      background: <?php echo $bkg_color ?>;
+      background-color: <?php echo $bkg_color ?>!important;
       <?php if($use_gradient): ?>
-        background: linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%); 
+        background: -moz-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
+        background: -webkit-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
+        background: linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
       <?php endif; ?>
       background-image: url(<?php echo $bkg_img ?>); 
       background-repeat: no-repeat;
