@@ -91,6 +91,9 @@ $display-font-weight:             300;
 
 
 //Custom
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 header{
     .navbar-brand{
         .logo{
@@ -443,9 +446,9 @@ header{
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	
-    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.4);
-	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.4);
-	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.2);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.2);
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.2);
 	
     height: 200px;
 	position: absolute;
