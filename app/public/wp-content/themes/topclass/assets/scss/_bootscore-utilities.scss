@@ -15,6 +15,16 @@ $utilities: map-merge(
         50: 50vh,
         25: 25vh,
         )
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      values: (
+        100: 100vh,
+        75: 75vh,
+        50: 50vh,
+        25: 25vh,
+        )
     )
   )
 );
