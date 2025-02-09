@@ -39,7 +39,7 @@
                   </div>
                 </div> 
               </div> 
-              <?php if(get_sub_field('animacion')=="Burbujas"){ ?>
+              <?php /* if(get_sub_field('animacion')=="Burbujas"){ */ ?>
                 <div id="background-wrap">
                   <div class="bubble x1"></div>
                   <div class="bubble x2"></div>
@@ -52,7 +52,7 @@
                   <div class="bubble x9"></div>
                   <div class="bubble x10"></div>
                 </div>
-              <?php } ?>
+              <?php /* } */ ?>
             </div>        
           <?php 
           $count--;   
