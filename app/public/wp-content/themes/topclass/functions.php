@@ -20,6 +20,10 @@ function bootscore_child_enqueue_styles() {
   $modificated_owlCss       = date('YmdHi', filemtime(get_stylesheet_directory_uri() . '/assets/css/owl.carousel.min.css'));
   wp_enqueue_style('owl', get_stylesheet_directory_uri() . '/assets/css/owl.carousel.min.css', array(), $modificated_owlCss);
   
+  //animate.css
+  $modificated_animateCss       = date('YmdHi', filemtime(get_stylesheet_directory_uri() . '/assets/css/animate.min.css'));
+  wp_enqueue_style('animate', get_stylesheet_directory_uri() . '/assets/css/animate.min.css', array(), $modificated_animateCss);
+
   // Compiled main.css
   $modified_bootscoreChildCss = date('YmdHi', filemtime(get_stylesheet_directory() . '/assets/css/main.css'));
   wp_enqueue_style('main', get_stylesheet_directory_uri() . '/assets/css/main.css', array('parent-style'), $modified_bootscoreChildCss);
