@@ -8,7 +8,7 @@ jQuery(function ($) {
           autoplay:true,
           rewind:true,
           autoplayHoverPause:true,
-          margin:10,
+          margin:0,
           nav:false,
           navText:["<div class='nav-btn prev-slide'><i class='fa-solid fa-chevron-left'></i></div>","<div class='nav-btn next-slide'><i class='fa-solid fa-chevron-right'></i></div>"],
           dots:true,
