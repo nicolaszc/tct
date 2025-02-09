@@ -51,7 +51,7 @@ $bajada = get_field('bajada');
                   the_content();               
                 ?>
               
-              <small>© <?php echo $_SERVER['HTTP_HOST'] ?> - <a href="https://topclass.club" >Grupo TopclassClub 2025.</a></small> 
+             
             </div>
           </div>
         </div>
