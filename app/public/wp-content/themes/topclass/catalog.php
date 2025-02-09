@@ -25,12 +25,10 @@ $bajada = get_field('bajada');
   <style>
     body{
       background-image: url(<?php echo $bkg_img ?>); 
-    }
-    @media (max-width:576px){
-      body{
-          background-size: <?php echo $bkg_sizebkg ?>;
-          background-position: <?php echo $bkg_position ?>;
-      }
+      background-repeat: no-repeat;
+      background-size: <?php echo $bkg_size ?>;
+      background-position: <?php echo $bkg_position ?>;
+      
     }
   </style>
   <div id="content" class="site-content">
