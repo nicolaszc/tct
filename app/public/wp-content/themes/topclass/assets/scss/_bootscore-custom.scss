@@ -167,9 +167,9 @@ header{
             background-color: var(--primary-dark-color);
         }
         .owl-dot{
-            border-color: var(--secondary-text-color)!important;
-            background-color: var(--primary-dark-color)!important;
-            border: 1px solid #FFF;
+            border-color: $white!important;
+            background-color: $gray-100!important;
+            border: 1px solid #FFF!important;
             width: 15px;
             height: 15px;
             margin: 25px 2px 5px;
@@ -187,14 +187,14 @@ header{
             transform: rotate(-90deg);
         }
         .owl-dot.active span{
-            color: var(--primary-color);
+            color: $white;
         }
         .owl-dot.active{
-            background-color: var(--primary-color)!important;
+            background-color: $white!important;
         }
     }
     .item{
-        height: calc(100vh - 150px);
+
 
         .caption{
             position: relative;
@@ -207,12 +207,12 @@ header{
             }
 
             .btn-outline-primary{
-                border-color: var(--primary-dark-color)!important;
-                color: var(--primary-dark-color);
+                border-color: $white!important;
+                color: $gray-100;
                 font-size: 0.75rem!important;
             }
             .btn-outline-primary:hover{
-                color: var(--primary-dark-color)!important;
+                color: $gray-100!important;
             }
         }
     }
