@@ -20,7 +20,7 @@
                       <p class=""><?php echo get_sub_field('bajada') ?></p>
                     <?php } ?>
                     <?php if (!empty(get_sub_field('link'))) { ?>
-                      <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1" style="color:<?php echo get_sub_field('color_texto'); ?>;border-color:<?php echo get_sub_field('color_texto'); ?>!important"><?php echo get_sub_field('link')['title'] ?></a>
+                      <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1"><?php echo get_sub_field('link')['title'] ?></a>
                     <?php } ?>
                   </div>
                 </div> 
