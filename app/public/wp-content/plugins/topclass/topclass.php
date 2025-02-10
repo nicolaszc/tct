@@ -49,13 +49,13 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
-function add_theme_scripts() {  
+/* function add_theme_scripts() {  
     //tc-style.css
     $modificated_tc_stylesCss = date('YmdHi', filemtime(plugins_url('tc-styles.css',  __FILE__)));
     wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), $modificated_tc_stylesCss, 'all');
-}
+} 
   
-add_action( 'get_footer', 'add_theme_scripts', 10000 );
+add_action( 'get_footer', 'add_theme_scripts', 10000 );*/
 
 remove_filter ('the_content', 'wpautop');
 add_filter('wpcf7_autop_or_not', '__return_false');
@@ -66,7 +66,7 @@ add_filter('wpcf7_form_elements', function($content) {
 });
 
 //Add our custom template to the admin's templates dropdown
-add_filter( 'theme_page_templates', 'pluginname_template_as_option', 10, 3 );
+/* add_filter( 'theme_page_templates', 'pluginname_template_as_option', 10, 3 );
 function pluginname_template_as_option( $page_templates, $theme, $post ){
 
     $page_templates['page-coming-soon.php'] = 'Coming Soon Page';
@@ -89,5 +89,5 @@ function pluginname_load_template( $template ) {
 
     return $template;
 
-}
+} */
 ?>
