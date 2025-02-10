@@ -37,8 +37,8 @@ defined('ABSPATH') || exit;
 <body <?php body_class(); ?>>
 <?php
 $host=$_SERVER['HTTP_HOST'];
-$bkg_color = get_field('body_bg_color');
-if ( have_rows( 'background_gradient' ) ) : 
+$bkg_color = get_field('body_bg_color','options');
+if ( have_rows( 'background_gradient' ,'options') ) : 
   while ( have_rows( 'background_gradient' ) ) : the_row();
       $use_gradient=get_sub_field('use_gradient');
       $color_1=get_sub_field('color_1');
@@ -47,10 +47,9 @@ if ( have_rows( 'background_gradient' ) ) :
       $color_4=get_sub_field('color_4');
   endwhile;
 endif;
-$bkg_img = get_field('body_bg');
-$bkg_size = get_field('body_bg_size');
-$bkg_position = get_field('body_bg_pos');
-$bajada = get_field('bajada');
+$bkg_img = get_field('body_bg','options');
+$bkg_size = get_field('body_bg_size','options');
+$bkg_position = get_field('body_bg_pos','options');
 ?>
 
   <style>
