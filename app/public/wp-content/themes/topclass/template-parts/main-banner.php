@@ -12,7 +12,7 @@
               <div class="caption container d-none d-md-block position-relative z-9">
                 <div class="row px-5 ">
                   <div class="<?php if(get_sub_field('alineacion_texto')=="izquierda"){ echo 'col-md-5';}?><?php if(get_sub_field('alineacion_texto')=="centro"){ echo 'col-md-6 offset-md-3 text-center';}?><?php if(get_sub_field('alineacion_texto')=="derecha"){ echo 'col-md-5 offset-md-7 text-end';}?>" style="color:<?php echo get_sub_field('color_texto'); ?>">
-                  <?php if (!empty(get_field('logo'))) { ?><img src="<?php echo get_field('logo'); ?>" alt="topclass" /><?php } ?>  
+                  <?php if (!empty(get_field('logo'))) { ?><img src="<?php echo get_field('logo'); ?>" alt="topclass" class="banner-logo" /><?php } ?>  
                   <?php if (!empty(get_sub_field('titulo'))) { ?>
                       <h1><?php echo get_sub_field('titulo') ?></h1>
                     <?php } ?>
