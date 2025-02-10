@@ -53,6 +53,8 @@ $bkg_position = get_field('body_bg_pos','options');
 ?>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
     html{
       min-height:100vh;
       height: auto;
