@@ -46,13 +46,13 @@ $bajada = get_field('bajada');
     }
     .site-content{
       <?php if($use_gradient): ?>
-        background: -moz-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
-        background: -webkit-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
-        background: linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 40%, <?php echo $color_3 ?> 60%, <?php echo $color_4 ?> 100%)!important; 
+        background: -moz-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
+        background: -webkit-linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
+        background: linear-gradient(0deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
       <?php endif; ?>
     }
-    footer{
+    header, footer{
       <?php if($use_gradient): ?>
         background: <?php echo $color_4 ?>!important;
       <?php else: ?>
