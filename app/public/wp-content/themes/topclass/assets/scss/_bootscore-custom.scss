@@ -97,13 +97,25 @@ body{
 header{
     .navbar-brand{
         .logo{
-            height: 60px;
+            height: 45px;
             width: auto;
+        }
+        @media(min-width:768px){
+            .logo{
+                height: 60px;
+                width: auto;
+            }
         }
     }
 }
 .bounce {
     animation: bounce 2s infinite;
+}
+.cart-content{
+    .badge{
+        background-color: $white;
+        color: $pink;
+    }
 }
 /* owl */
 
@@ -231,7 +243,6 @@ header{
     }
     @media(min-width:768px){
         .item{
-            height: calc(100vh - 105px);
         
             .caption{
                 position: relative;
