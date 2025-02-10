@@ -50,22 +50,18 @@ endif;
 $bkg_img = get_field('body_bg','options');
 $bkg_size = get_field('body_bg_size','options');
 $bkg_position = get_field('body_bg_pos','options');
+$header_color = get_field('header_color','options');
+$footer_color = get_field('footer_color','options');
 ?>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-    html{
-      min-height:100vh;
-      height: auto;
-    }
     body{
-      background-color: <?php echo $bkg_color ?>!important;
-      background-image: url(<?php echo $bkg_img ?>); 
-      background-repeat: no-repeat;
-      background-size: <?php echo $bkg_size ?>;
-      background-position: <?php echo $bkg_position ?>;
-      min-height:100vh;
+      <?php if($bkg_color): ?>background-color: <?php echo $bkg_color ?>!important;<?php endif; ?>
+      <?php if($bkg_img): ?>background-image: url(<?php echo $bkg_img ?>);<?php endif; ?> 
+      <?php if($bkg_size): ?>background-size: <?php echo $bkg_size ?>;<?php endif; ?>
+      <?php if($bkg_position): ?>background-position: <?php echo $bkg_position ?>;<?php endif; ?>
     }
     .site-content{
       <?php if($use_gradient): ?>
@@ -75,12 +71,12 @@ $bkg_position = get_field('body_bg_pos','options');
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
       <?php endif; ?>
     }
-    header, footer{
-      <?php if($use_gradient): ?>
-        background: <?php echo $color_4 ?>!important;
-      <?php else: ?>
-        background:rgb(237, 26, 115)!important;
-      <?php endif; ?>
+    header{
+      <?php if($header_color): ?>background: <?php echo $header_color ?>!important;<?php endif; ?>
+    }
+    
+    footer{
+      <?php if($footer_color): ?>background: <?php echo $footer_color ?>!important;<?php endif; ?>
     }
   </style>
 <?php wp_body_open(); ?>
