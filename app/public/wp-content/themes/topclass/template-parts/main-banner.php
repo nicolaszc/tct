@@ -28,7 +28,7 @@
               <div class="caption container d-block d-md-none position-relative z-9">
                 <div class="row px-5 ">
                   <div class="col-md-6 offset-md-3 text-center" style="color:<?php echo get_sub_field('color_texto'); ?>">
-                  <?php if (!empty(get_field('logo'))) { ?><img src="<?php echo get_field('logo'); ?>" alt="topclass" /><?php } ?>   
+                  <?php if (!empty(get_field('logo'))) { ?><img src="<?php echo get_field('logo'); ?>" alt="topclass" class="banner-logo"/><?php } ?>   
                   <?php if (!empty(get_sub_field('titulo'))) { ?>
                       <h1><?php echo get_sub_field('titulo') ?></h1>
                     <?php } ?>
