@@ -28,7 +28,6 @@ $bkg_img = get_field('body_bg');
 $bkg_size = get_field('body_bg_size');
 $bkg_position = get_field('body_bg_pos');
 $bajada = get_field('bajada');
-
 ?>
 
   <style>
@@ -68,7 +67,7 @@ $bajada = get_field('bajada');
       <main id="main" class="site-main">
 
         <div class="entry-content">
-          <div class="catalog min-vh-75">
+          <div class="catalog min-vh-100">
             <div class="content">
   
                 <p style="margin: 0;"><?php echo $bajada; ?></p>
