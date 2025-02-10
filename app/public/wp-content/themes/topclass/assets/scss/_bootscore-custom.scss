@@ -27,7 +27,7 @@ $black:                           #000;
 $blue:                            #0d6efd;
 $indigo:                          #6610f2;
 $purple:                          #6f42c1;
-$pink:                            #d63384;
+$pink:                            rgb(237, 26, 115);
 $red:                             #dc3545;
 $orange:                          #fd7e14;
 $yellow:                          #ffc107;
@@ -208,15 +208,17 @@ header{
             z-index: 2;
         
             .row{
-                height: 100vh;
+                height: 80vh;
                 text-align: center;
                 align-items: center;
+                margin-top: 20vh;
             }
 
             .btn-outline-primary{
-                border-color: $white!important;
-                color: $gray-100;
+                border-color: $pink!important;
+                color: $white;
                 font-size: 0.75rem!important;
+                background-color: $pink!important ;
             }
             .btn-outline-primary:hover{
                 color: $gray-100!important;
@@ -236,9 +238,10 @@ header{
                 z-index: 2;
             
                 .row{
-                    height: 100vh;
+                    height: 80vh;
                     align-items: center;
                     text-align: left;
+                    margin-top: 20vh;
                 }
             }
         }
