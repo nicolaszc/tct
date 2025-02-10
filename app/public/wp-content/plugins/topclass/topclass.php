@@ -50,7 +50,9 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
 function add_theme_scripts() {  
-    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), '1.2', 'all');
+    //tc-style.css
+    $modificated_tc_stylesCss = date('YmdHi', filemtime(plugins_url('tc-styles.css',  __FILE__)));
+    wp_enqueue_style( 'tc', plugins_url( 'tc-styles.css', __FILE__ ), array(), $modificated_tc_stylesCss, 'all');
 }
   
 add_action( 'get_footer', 'add_theme_scripts', 10000 );
