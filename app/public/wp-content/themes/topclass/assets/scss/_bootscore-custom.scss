@@ -82,7 +82,7 @@ $link-hover-decoration:           null;
 
 
 // Fonts
-$font-family-base:                Montserrat, Roboto, system-ui, -apple-system, "Segoe UI",  "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:                Montserrat, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 
 // Headings & display
 $headings-font-family:            null;
@@ -228,8 +228,6 @@ header{
 
 
         .caption{
-            position: relative;
-            z-index: 2;
             font-family: $font-family-base!important;
             .row{
                 height: 80vh;
