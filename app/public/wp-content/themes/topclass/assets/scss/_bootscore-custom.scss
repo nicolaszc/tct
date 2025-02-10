@@ -221,6 +221,10 @@ header{
             .btn-outline-primary:hover{
                 color: $gray-100!important;
             }
+            .banner-logo{
+                width: 200px;
+                margin: auto;
+            }
         }
     }
     @media(min-width:768px){
