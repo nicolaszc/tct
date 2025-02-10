@@ -92,7 +92,7 @@ $display-font-weight:             300;
 
 //Custom
 body{
-    font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif!important;
+    font-family: $font-family-base!important;
 }
 header{
     .navbar-brand{
@@ -158,7 +158,7 @@ header{
             width: 1.25rem;
             height: 1.25rem;
             font-size: 1.25rem!important;
-            color: var(--primary-dark-color)!important;
+            color: $gray-800!important;
         }
         .owl-next{
             position: absolute;
@@ -167,7 +167,7 @@ header{
             width: 1.25rem;
             height: 1.25rem;
             font-size: 1.25rem!important;
-            color: var(--primary-dark-color)!important;
+            color: $gray-800!important;
         }
     }
     .owl-dots{
@@ -230,7 +230,7 @@ header{
         .caption{
             position: relative;
             z-index: 2;
-        
+            font-family: $font-family-base!important;
             .row{
                 height: 80vh;
                 text-align: center;
