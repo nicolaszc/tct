@@ -130,6 +130,7 @@ body.home{
         display: block;
         width: 50%;
         margin: 0 auto 1rem;
+	    color:#FFF;
     }
     .btn-primary.girls{
         margin-top: 50px;
