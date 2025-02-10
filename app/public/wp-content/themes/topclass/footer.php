@@ -64,7 +64,7 @@ defined('ABSPATH') || exit;
     </div>
   </div>
 
-  <div class="<?= apply_filters('bootscore/class/footer/info', 'text-body-secondary border-top py-2 text-center'); ?> bootscore-footer-info">
+  <div class="<?= apply_filters('bootscore/class/footer/info', 'text-body-secondary py-2 text-center'); ?> bootscore-footer-info">
     <div class="<?= apply_filters('bootscore/class/container', 'container', 'footer-info'); ?>">
       <?php if (is_active_sidebar('footer-info')) : ?>
         <?php dynamic_sidebar('footer-info'); ?>
