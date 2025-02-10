@@ -55,7 +55,7 @@ $bajada = get_field('bajada');
       <?php if($use_gradient): ?>
         background: <?php echo $color_4 ?>!important;
       <?php else: ?>
-        background: #ed1a73!important;
+        background:rgb(237, 26, 115)!important;
       <?php endif; ?>
     }
   </style>
