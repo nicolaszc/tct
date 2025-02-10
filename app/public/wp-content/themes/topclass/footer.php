@@ -69,10 +69,9 @@ defined('ABSPATH') || exit;
       <?php if (is_active_sidebar('footer-info')) : ?>
         <?php dynamic_sidebar('footer-info'); ?>
       <?php endif; ?>
-      <div class="small bootscore-copyright"><span class="cr-symbol">&copy;</span>&nbsp;<?= date('Y'); ?> <?php bloginfo('name'); ?></div>
+      <div class="small bootscore-copyright"><span class="cr-symbol">&copy;</span>&nbsp;<?= date('Y'); ?> <?php bloginfo('name'); ?> - <?php echo $_SERVER['HTTP_HOST'] ?> - <a href="https://topclass.club" class="text-light">Grupo TopclassClub 2025.</a></div>
     </div>
   </div>
-  <small>© <?php echo $_SERVER['HTTP_HOST'] ?> - <a href="https://topclass.club" >Grupo TopclassClub 2025.</a></small> 
 </footer>
 
 <!-- To top button -->
