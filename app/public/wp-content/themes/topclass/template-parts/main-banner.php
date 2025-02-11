@@ -42,7 +42,7 @@
             
             <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
             <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
-            <div class="overlay posoition-absolute z-8"></div>
+            <div class="overlay position-absolute z-8"></div>
 
             <div class="caption container d-none d-md-block position-relative z-9">
               <div class="row px-5 ">
