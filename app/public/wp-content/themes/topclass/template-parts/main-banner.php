@@ -79,13 +79,13 @@
                   <?php if (!empty(get_sub_field('link'))) { ?>
                     <?php if(get_sub_field('shadow')=='small'){
                       $shadow = 'shadow-sm';
-                    }if (get_sub_field('shadow')=='large') {
+                    }elseif (get_sub_field('shadow')=='large') {
                       $shadow = 'shadow-lg';
                     } else {
                       $shadow = 'shadow';
                     }
                     ?>
-                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 <?php echo $shadow; ?>" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;" ><?php echo get_sub_field('link')['title'] ?></a>
+                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 <?php echo $shadow ?>" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;" ><?php echo get_sub_field('link')['title'] ?></a>
                   <?php } ?>
                 </div>
               </div> 
