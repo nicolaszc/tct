@@ -17,9 +17,9 @@
           height: <?php echo $overlay_height ?>;
           top: <?php echo $overlay_position_y ?>;
           left: <?php echo $overlay_position_x ?>;
-          background: -moz-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
-          background: -webkit-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
-          background: linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          background: -moz-linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          background: -webkit-linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          background: linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
         }
       </style>
@@ -42,7 +42,7 @@
             
             <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
             <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
-            <div class="overlay z-8"></div>
+            <div class="overlay posoition-absolute z-8"></div>
 
             <div class="caption container d-none d-md-block position-relative z-9">
               <div class="row px-5 ">
