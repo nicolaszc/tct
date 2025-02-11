@@ -1,4 +1,16 @@
 <!-- Banners -->
+<?php if(get_field('color_overlay')): 
+  $color_overlay = get_field('color_overlay');
+?>
+<style>
+  .overlay{
+    background: -moz-linear-gradient(180deg, <?php echo $color_overlay ?> 0%, <?php echo $color_overlay ?> 80%);
+    background: -webkit-linear-gradient(180deg, <?php echo $color_overlay ?> 0%, <?php echo $color_overlay ?> 80%);
+    background: linear-gradient(180deg, <?php echo $color_overlay ?> 0%, <?php echo $color_overlay ?> 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_overlay ?>', endColorstr='<?php echo $color_overlay ?>', GradientType=1);
+  }
+</style>
+<?php endif ?>
 <?php if ( have_rows( 'banners' ) ) : 
     $count = count(get_field('banners'));?>
       <section id="main-banner" class="vh-100 overflow-hidden">
@@ -9,6 +21,7 @@
             <div class="item position-relative vh-100 overflow-hidden" data-dot="<span>0<?php echo $count ?> </span>">
               <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
               <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
+              <div class="overlay position-absolute vw-100 vh-100 z-8"></div>
               <div class="caption container d-none d-md-block position-relative z-9">
                 <div class="row px-5 ">
                   <div class="<?php if(get_sub_field('alineacion_texto')=="izquierda"){ echo 'col-md-5';}?><?php if(get_sub_field('alineacion_texto')=="centro"){ echo 'col-md-6 offset-md-3 text-center';}?><?php if(get_sub_field('alineacion_texto')=="derecha"){ echo 'col-md-5 offset-md-7 text-end';}?>" style="color:<?php echo get_sub_field('color_texto'); ?>">
