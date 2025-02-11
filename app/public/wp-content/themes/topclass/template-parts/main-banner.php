@@ -1,12 +1,12 @@
 <!-- Banners -->
   <!-- Overlay -->
-  <?php if(get_field('use_overlay')): 
-    $overlay_color_1 = get_field('overlay_color_1');
-    $overlay_color_2 = get_field('overlay_color_2');
-    $overlay_width = get_field('overlay_width');
-    $overlay_height = get_field('overlay_height');
-    $overlay_position_y = get_field('overlay_position_y');
-    $overlay_position_y = get_field('overlay_position_y');
+  <?php if(get_sub_field('use_overlay')): 
+    $overlay_color_1 = get_sub_field('overlay_color_1');
+    $overlay_color_2 = get_sub_field('overlay_color_2');
+    $overlay_width = get_sub_field('overlay_width');
+    $overlay_height = get_sub_field('overlay_height');
+    $overlay_position_y = get_sub_field('overlay_position_y');
+    $overlay_position_y = get_sub_field('overlay_position_y');
   ?>
   <style>
     .overlay{
