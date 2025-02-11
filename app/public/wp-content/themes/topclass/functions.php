@@ -41,13 +41,3 @@ function bootscore_child_enqueue_styles() {
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), $modificated_CustomJS, true);
     
 }
-acf.add_filter('color_picker_args', function( args, field ){
-
-  // do something to args
-  args.palettes = ['#5ee8bf', '#2f353e', '#f55e4f']
-
-
-  // return
-  return args;
-
-});
