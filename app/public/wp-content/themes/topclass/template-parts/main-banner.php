@@ -10,6 +10,7 @@
         $overlay_height = get_sub_field('overlay_height');
         $overlay_position_x = get_sub_field('overlay_position_x');
         $overlay_position_y = get_sub_field('overlay_position_y');
+        $blend_mode = get_sub_field('blend_mode');
       ?>
       <style>
         .overlay{
@@ -21,6 +22,9 @@
           background: -webkit-linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
           background: linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
+        }
+        .overlay.z-7{
+          mix-blend-mode: <?php echo $blend_mode ?>;
         }
       </style>
   <?php
@@ -42,6 +46,7 @@
             
             <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
             <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
+            <div class="overlay position-absolute z-7"></div>
             <div class="overlay position-absolute z-8"></div>
 
             <div class="caption container d-none d-md-block position-relative z-9">
