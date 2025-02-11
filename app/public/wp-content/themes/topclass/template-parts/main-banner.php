@@ -1,26 +1,32 @@
 <!-- Banners -->
   <!-- Overlay -->
-  <?php if(get_sub_field('use_overlay')): 
-    $overlay_color_1 = get_sub_field('overlay_color_1');
-    $overlay_color_2 = get_sub_field('overlay_color_2');
-    $overlay_width = get_sub_field('overlay_width');
-    $overlay_height = get_sub_field('overlay_height');
-    $overlay_position_y = get_sub_field('overlay_position_y');
-    $overlay_position_y = get_sub_field('overlay_position_y');
-  ?>
-  <style>
-    .overlay{
-      width: <?php echo $overlay_width ?>;
-      height: <?php echo $overlay_height ?>;
-      top: <?php echo $overlay_position_y ?>;
-      left: <?php echo $overlay_position_x ?>;
-      background: -moz-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
-      background: -webkit-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
-      background: linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
-    }
-  </style>
-  <?php endif ?>
+  <?php 
+  if ( have_rows( 'overlay' ) ) : 
+    if(get_sub_field('use_overlay')): 
+      while ( have_rows( 'overlay' ) ) : the_row();
+        $overlay_color_1 = get_sub_field('overlay_color_1');
+        $overlay_color_2 = get_sub_field('overlay_color_2');
+        $overlay_width = get_sub_field('overlay_width');
+        $overlay_height = get_sub_field('overlay_height');
+        $overlay_position_x = get_sub_field('overlay_position_x');
+        $overlay_position_y = get_sub_field('overlay_position_y');
+      ?>
+      <style>
+        .overlay{
+          width: <?php echo $overlay_width ?>;
+          height: <?php echo $overlay_height ?>;
+          top: <?php echo $overlay_position_y ?>;
+          left: <?php echo $overlay_position_x ?>;
+          background: -moz-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          background: -webkit-linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          background: linear-gradient(180deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
+        }
+      </style>
+  <?php 
+      endwhile
+    endif;
+  endif ?>
 
   <!-- Main Banner Carousel-->
   <?php if ( have_rows( 'banners' ) ) : 
