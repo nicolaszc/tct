@@ -23,7 +23,7 @@
           background: linear-gradient(0deg, <?php echo $overlay_color_1 ?> 0%, <?php echo $overlay_color_2 ?> 80%);
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
         }
-        .overlay.z-7{
+        .overlay.z-6{
           mix-blend-mode: <?php echo $blend_mode ?>;
         }
       </style>
@@ -46,7 +46,7 @@
             
             <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
             <img src="<?php echo esc_url( get_sub_field( 'imagen_desktop' )['url'] ); ?>" class="position-absolute d-none d-md-block w-100"/>
-            <div class="overlay position-absolute z-7"></div>
+            <div class="overlay position-absolute z-6"></div>
             <div class="overlay position-absolute z-8"></div>
 
             <div class="caption container d-none d-md-block position-relative z-9">
@@ -77,13 +77,21 @@
                     <p class=""><?php echo get_sub_field('bajada') ?></p>
                   <?php } ?>
                   <?php if (!empty(get_sub_field('link'))) { ?>
-                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 shadow-sm" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;" ><?php echo get_sub_field('link')['title'] ?></a>
+                    <?php if(get_sub_field('shadow')=='small'){
+                      $shadow = 'shadow-sm';
+                    }if (get_sub_field('shadow')=='large') {
+                      $shadow = 'shadow-lg';
+                    } else {
+                      $shadow = 'shadow';
+                    }
+                    ?>
+                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 <?php echo $shadow; ?>" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;" ><?php echo get_sub_field('link')['title'] ?></a>
                   <?php } ?>
                 </div>
               </div> 
             </div> 
 
-            <div id="background-wrap">
+            <div id="background-wrap z-7">
               <div class="bubble x1"></div>
               <div class="bubble x2"></div>
               <div class="bubble x3"></div>
