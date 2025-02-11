@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name:  Custom Backend
-Plugin URI:   http://topclass-entertainmenmt.com
+Plugin URI:   https://topclass-entertainmenmt.com
 Description:  Custom Backend WordPress Plugin
 Version:      1.0
 Author:       Topclass Entertainment
-Author URI:   http://topclass-entertainmenmt.com
+Author URI:   https://topclass-entertainmenmt.com
 License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  wporg
@@ -85,7 +85,7 @@ function admin_styles() {
     } 
     #wpadminbar #wp-admin-bar-my-sites a.ab-item, 
     #wpadminbar #wp-admin-bar-site-name>a.ab-item { 
-      background-image:url(<?php echo get_stylesheet_directory_uri().'/img/logo/favicon.png'; ?>) !important; 
+      background-image:url(<?php echo '../'.get_stylesheet_directory_uri().'/assets/img/logo/favicon.png'; ?>) !important; 
       background-repeat: no-repeat; 
       text-indent: -100vw; 
       width: 95px; 
