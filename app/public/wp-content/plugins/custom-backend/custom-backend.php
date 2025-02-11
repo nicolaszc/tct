@@ -85,7 +85,7 @@ function admin_styles() {
     } 
     #wpadminbar #wp-admin-bar-my-sites a.ab-item, 
     #wpadminbar #wp-admin-bar-site-name>a.ab-item { 
-      background-image:url(<?php echo '../'.get_stylesheet_directory_uri().'/assets/img/logo/favicon.png'; ?>) !important; 
+      background-image:url(<?php echo '../topclass/assets/img/logo/favicon.png'; ?>) !important; 
       background-repeat: no-repeat; 
       text-indent: -100vw; 
       width: 95px; 
