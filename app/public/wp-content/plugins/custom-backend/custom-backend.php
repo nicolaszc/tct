@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name:  Topclass
-Plugin URI:   http://topclass.club
-Description:  Topclass WordPress Plugin
+Plugin Name:  Custom Backend
+Plugin URI:   http://topclass-entertainmenmt.com
+Description:  Custom Backend WordPress Plugin
 Version:      1.0
-Author:       Topclass
-Author URI:   http:/topclass.club
+Author:       Topclass Entertainment
+Author URI:   http://topclass-entertainmenmt.com
 License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  wporg
