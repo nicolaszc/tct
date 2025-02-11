@@ -2,8 +2,8 @@
   <!-- Overlay -->
   <?php 
   if ( have_rows( 'overlay' ) ) : 
-    if(get_sub_field('use_overlay')): 
-      while ( have_rows( 'overlay' ) ) : the_row();
+    while ( have_rows( 'overlay' ) ) : the_row();
+      if(get_sub_field('use_overlay')):     
         $overlay_color_1 = get_sub_field('overlay_color_1');
         $overlay_color_2 = get_sub_field('overlay_color_2');
         $overlay_width = get_sub_field('overlay_width');
@@ -23,10 +23,10 @@
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $overlay_color_1 ?>', endColorstr='<?php echo $color_overlay_2 ?>', GradientType=1);
         }
       </style>
-  <?php 
-      endwhile
-    endif;
-  endif ?>
+  <?php
+      endif; 
+    endwhile;
+  endif; ?>
 
   <!-- Main Banner Carousel-->
   <?php if ( have_rows( 'banners' ) ) : 
