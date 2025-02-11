@@ -6,6 +6,7 @@
     $overlay_width = get_field('overlay_width');
     $overlay_height = get_field('overlay_height');
     $overlay_position_y = get_field('overlay_position_y');
+    $overlay_position_y = get_field('overlay_position_y');
   ?>
   <style>
     .overlay{
@@ -24,7 +25,7 @@
   <!-- Main Banner Carousel-->
   <?php if ( have_rows( 'banners' ) ) : 
     $count = count(get_field('banners')); ?>
-    
+
     <section id="main-banner" class="vh-100 overflow-hidden">
 
       <div class="owl-carousel owl-main-banner">
