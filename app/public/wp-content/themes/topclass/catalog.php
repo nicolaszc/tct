@@ -16,7 +16,7 @@ get_header();
 ?>
   
 
-  <div id="wrapper" class="site-wrapper sticky-top">
+  <div id="wrapper" class="site-wrapper sticky-top z-5">
 
       <main id="main" class="site-main">
 
