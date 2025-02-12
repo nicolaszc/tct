@@ -16,12 +16,10 @@ get_header();
 ?>
   
 
-  <div id="content" class="site-content">
-    <div id="primary" class="content-area">
+  <div id="wrapper" class="site-wrapper sticky-top">
 
       <main id="main" class="site-main">
 
-        <div class="entry-content">
           <div class="catalog min-vh-100">
             <div class="content">
   
@@ -29,15 +27,12 @@ get_header();
                 <?php 
                   the_content();               
                 ?>
-              
-             
+                         
             </div>
           </div>
-        </div>
 
       </main>
 
-    </div>
   </div>
 
 <?php
