@@ -40,11 +40,11 @@ $host=$_SERVER['HTTP_HOST'];
 $bkg_color = get_field('body_bg_color','options');
 if ( have_rows( 'background_gradient' ,'options') ) : 
   while ( have_rows( 'background_gradient' ) ) : the_row();
-      $use_gradient=get_sub_field('use_gradient');
-      $color_1=get_sub_field('color_1');
-      $color_2=get_sub_field('color_2');
-      $color_3=get_sub_field('color_3');
-      $color_4=get_sub_field('color_4');
+      $use_gradient=get_sub_field('use_gradient','options');
+      $color_1=get_sub_field('color_1','options');
+      $color_2=get_sub_field('color_2','options');
+      $color_3=get_sub_field('color_3','options');
+      $color_4=get_sub_field('color_4','options');
   endwhile;
 endif;
 $bkg_img = get_field('body_bg','options');
