@@ -17,7 +17,7 @@ defined('ABSPATH') || exit;
 ?>
 
 
-<footer id="footer" class="bootscore-footer">
+<footer id="footer" class="bootscore-footer z-1">
 
   <?php if (is_active_sidebar('footer-top')) : ?>
     <div class="<?= apply_filters('bootscore/class/footer/top', 'py-5'); ?> bootscore-footer-top">
