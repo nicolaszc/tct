@@ -21,9 +21,8 @@ get_header();
       <main id="main" class="site-main">
 
           <div class="catalog min-vh-100">
-            <div class="content">
+            <div class="container text-light">
   
-                <p style="margin: 0;"><?php echo $bajada; ?></p>
                 <?php 
                   the_content();               
                 ?>
