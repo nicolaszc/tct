@@ -1,8 +1,16 @@
 jQuery(function ($) {
+  // Scroll to top Button
+  $(window).on('scroll', function () {
+    var scroll = $(window).scrollTop();
 
+    if (scroll >= $(window).height()/2) {
+      $('header-actions').addClass('visible');
+    } else {
+      $('header-actions').removeClass('visible');
+    }
+  });
     // Do stuff here
     $(document).ready(function() {
-
         $('.owl-main-banner').owlCarousel({
           loop:false,
           autoplay:true,

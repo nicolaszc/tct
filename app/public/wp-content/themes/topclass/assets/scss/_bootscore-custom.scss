@@ -115,6 +115,8 @@ header{
     }
 
     .header-actions{
+        opacity: 0;
+        visibility: hidden;
         .cart-total{
             display: none;
         }
