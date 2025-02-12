@@ -40,8 +40,15 @@
 
       <div class="owl-carousel owl-main-banner">
         <?php 
-        while ( have_rows( 'banners' ) ) : the_row(); ?>
-
+        while ( have_rows( 'banners' ) ) : the_row(); 
+          if(get_sub_field('shadow')=='small'){
+            $shadow = 'shadow-sm';
+          }elseif (get_sub_field('shadow')=='large') {
+            $shadow = 'shadow-lg';
+          } else {
+            $shadow = 'shadow';
+          }
+        ?>
           <div class="item position-relative vh-100 overflow-hidden" data-dot="<span>0<?php echo $count ?> </span>">
             
             <img src="<?php echo esc_url( get_sub_field( 'imagen_mobile' )['url'] ); ?>" class="position-absolute d-block d-md-none w-100"/>
@@ -60,7 +67,7 @@
                     <p class=""><?php echo get_sub_field('bajada') ?></p>
                   <?php } ?>
                   <?php if (!empty(get_sub_field('link'))) { ?>
-                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 shadow-sm" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;"><?php echo get_sub_field('link')['title'] ?></a>
+                    <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 <?php echo $shadow ?>" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;"><?php echo get_sub_field('link')['title'] ?></a>
                   <?php } ?>
                 </div>
               </div> 
@@ -77,14 +84,6 @@
                     <p class=""><?php echo get_sub_field('bajada') ?></p>
                   <?php } ?>
                   <?php if (!empty(get_sub_field('link'))) { ?>
-                    <?php if(get_sub_field('shadow')=='small'){
-                      $shadow = 'shadow-sm';
-                    }elseif (get_sub_field('shadow')=='large') {
-                      $shadow = 'shadow-lg';
-                    } else {
-                      $shadow = 'shadow';
-                    }
-                    ?>
                     <a href="<?php echo get_sub_field('link')['url'] ?>" class="btn btn-outline-primary rounded-pill px-5 text-uppercase fs-1 <?php echo $shadow ?>" style="color: <?php echo get_sub_field('button_text_color'); ?>;background-color: <?php echo get_sub_field('button_color'); ?>;border-color:<?php echo get_sub_field('button_border_color'); ?>;" ><?php echo get_sub_field('link')['title'] ?></a>
                   <?php } ?>
                 </div>

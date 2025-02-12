@@ -41,3 +41,35 @@ function bootscore_child_enqueue_styles() {
   wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery'), $modificated_CustomJS, true);
     
 }
+// Allow SVG
+add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
+
+  global $wp_version;
+  if ( $wp_version !== '4.7.1' ) {
+     return $data;
+  }
+
+  $filetype = wp_check_filetype( $filename, $mimes );
+
+  return [
+      'ext'             => $filetype['ext'],
+      'type'            => $filetype['type'],
+      'proper_filename' => $data['proper_filename']
+  ];
+
+}, 10, 4 );
+
+function cc_mime_types( $mimes ){
+$mimes['svg'] = 'image/svg+xml';
+return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+define('ALLOW_UNFILTERED_UPLOADS', true);
+
+remove_filter ('the_content', 'wpautop');
+add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter('wpcf7_form_elements', function($content) {
+  $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+  return $content;
+});
