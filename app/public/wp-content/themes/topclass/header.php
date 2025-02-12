@@ -68,7 +68,7 @@ $footer_color = get_field('footer_color','options');
         background: <?php echo $header_color ?>!important;
     }
     header .header-gradient{
-      height:30vh;
+      height:20vh;
       background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
       background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
       background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
