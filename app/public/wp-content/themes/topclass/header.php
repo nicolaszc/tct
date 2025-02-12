@@ -39,12 +39,12 @@ defined('ABSPATH') || exit;
 $host=$_SERVER['HTTP_HOST'];
 $bkg_color = get_field('body_bg_color','options');
 if ( have_rows( 'background_gradient' ,'options') ) : 
-  while ( have_rows( 'background_gradient' ) ) : the_row();
-      $use_gradient=get_sub_field('use_gradient','options');
-      $color_1=get_sub_field('color_1','options');
-      $color_2=get_sub_field('color_2','options');
-      $color_3=get_sub_field('color_3','options');
-      $color_4=get_sub_field('color_4','options');
+  while ( have_rows( 'background_gradient','options' ) ) : the_row();
+      //$use_gradient=get_sub_field('use_gradient','options');
+      $color_1=get_sub_field('color_1');
+      $color_2=get_sub_field('color_2');
+      $color_3=get_sub_field('color_3');
+      $color_4=get_sub_field('color_4');
   endwhile;
 endif;
 $bkg_img = get_field('body_bg','options');
@@ -71,17 +71,17 @@ $footer_color = get_field('footer_color','options');
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
       <?php /* endif; */ ?> */
     }
-    header{
-      <?php if($header_color): ?>background: <?php echo $header_color ?>!important;<?php endif; ?>
+    header #nav-main{
+        background: <?php echo $header_color ?>!important;
     }
     header .header-gradient{
       height:30vh;
-      <?php if($use_gradient): ?>
+      
         background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
         background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
         background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_¿2 ?>', GradientType=1)!important;
-      <?php endif; ?>
+     
     }
     footer{
       <?php if($footer_color): ?>background: <?php echo $footer_color ?>!important;<?php endif; ?>
