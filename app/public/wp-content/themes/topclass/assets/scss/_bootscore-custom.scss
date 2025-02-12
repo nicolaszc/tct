@@ -113,6 +113,13 @@ header{
             }
         }
     }
+
+    .header-actions{
+        .cart-total{
+            display: none;
+        }
+
+    }
 }
 .bounce {
     animation: bounce 2s infinite;
