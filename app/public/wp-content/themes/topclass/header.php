@@ -63,24 +63,16 @@ $footer_color = get_field('footer_color','options');
       <?php if($bkg_size): ?>background-size: <?php echo $bkg_size ?>;<?php endif; ?>
       <?php if($bkg_position): ?>background-position: <?php echo $bkg_position ?>;<?php endif; ?>
     }
-    /* .site-wrapper{
-      <?php /* if($use_gradient): */ ?>
-        background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
-        background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
-        background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
-      <?php /* endif; */ ?> */
-    }
+  
     header #nav-main{
         background: <?php echo $header_color ?>!important;
     }
     header .header-gradient{
       height:30vh;
-      
-        background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
-        background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
-        background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_¿2 ?>', GradientType=1)!important;
+      background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+      background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+      background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_¿2 ?>', GradientType=1)!important;
      
     }
     footer{
