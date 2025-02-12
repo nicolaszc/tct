@@ -63,18 +63,26 @@ $footer_color = get_field('footer_color','options');
       <?php if($bkg_size): ?>background-size: <?php echo $bkg_size ?>;<?php endif; ?>
       <?php if($bkg_position): ?>background-position: <?php echo $bkg_position ?>;<?php endif; ?>
     }
-    .site-wrapper{
-      <?php if($use_gradient): ?>
+    /* .site-wrapper{
+      <?php /* if($use_gradient): */ ?>
         background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
         background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
         background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 30%, <?php echo $color_3 ?> 70%, <?php echo $color_4 ?> 100%)!important; 
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_4 ?>', GradientType=1)!important;
-      <?php endif; ?>
+      <?php /* endif; */ ?> */
     }
     header{
       <?php if($header_color): ?>background: <?php echo $header_color ?>!important;<?php endif; ?>
     }
-    
+    header .header-gradient{
+      height:30vh;
+      <?php if($use_gradient): ?>
+        background: -moz-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+        background: -webkit-linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+        background: linear-gradient(180deg, <?php echo $color_1 ?> 0%, <?php echo $color_2 ?> 100%)!important; 
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='<?php echo $color_1 ?>', endColorstr='<?php echo $color_¿2 ?>', GradientType=1)!important;
+      <?php endif; ?>
+    }
     footer{
       <?php if($footer_color): ?>background: <?php echo $footer_color ?>!important;<?php endif; ?>
     }
@@ -163,5 +171,5 @@ $footer_color = get_field('footer_color','options');
       get_template_part('template-parts/header/offcanvas', 'woocommerce');
     endif;
     ?>
-
+  <div class="header-gradient"></div>
   </header><!-- #masthead -->
