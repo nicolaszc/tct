@@ -16,12 +16,12 @@ get_header();
 ?>
   
 
-  <div id="wrapper" class="site-wrapper sticky-top z-0">
+  <div id="wrapper" class="site-wrapper sticky-top z-0 position-relative">
 
       <main id="main" class="site-main">
 
           <div class="catalog min-vh-100">
-            <div class="container text-light">
+            <div class="container text-light ">
   
                 <?php 
                   the_content();               

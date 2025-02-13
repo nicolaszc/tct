@@ -37,9 +37,14 @@ defined('ABSPATH') || exit;
 <body <?php body_class(); ?>>
 <?php
 $host=$_SERVER['HTTP_HOST'];
+$site_logo= get_field('site_logo','options');
+$site_typo= get_field('site_typo','options');
 $bkg_color = get_field('body_bg_color','options');
-if ( have_rows( 'background_gradient' ,'options') ) : 
-  while ( have_rows( 'background_gradient','options' ) ) : the_row();
+
+//Theme styles
+
+if ( have_rows( 'header_styles' ,'options') ) : 
+  while ( have_rows( 'header_styles','options' ) ) : the_row();
       //$use_gradient=get_sub_field('use_gradient','options');
       $color_1=get_sub_field('color_1');
       $color_2=get_sub_field('color_2');
@@ -90,8 +95,12 @@ $footer_color = get_field('footer_color','options');
   <!-- Top Bar Widget -->
   <?php if (is_active_sidebar('top-bar')) : ?>
     <?php dynamic_sidebar('top-bar'); ?>
-  <?php endif; ?>  
+  <?php endif; ?> 
+  
+  <!-- Main Banner -->
   <?php get_template_part('template-parts/main-banner'); ?>
+
+  <!-- Header -->
   <header id="masthead" class="<?= apply_filters('bootscore/class/header', 'sticky-top'); ?> site-header">
 
     <nav id="nav-main" class="navbar <?= apply_filters('bootscore/class/header/navbar/breakpoint', 'navbar-expand-lg'); ?>">
